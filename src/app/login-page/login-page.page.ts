@@ -32,6 +32,7 @@ export class LoginPagePage {
       duration : 3000,
       message : msg
     });
+    display.present();
   }
 
 }
