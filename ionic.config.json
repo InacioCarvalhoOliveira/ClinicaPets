@@ -1,0 +1,7 @@
+{
+  "name": "ClinicaPets",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
