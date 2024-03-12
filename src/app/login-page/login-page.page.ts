@@ -8,8 +8,8 @@ import { NavController, ToastController } from '@ionic/angular';
 })
 export class LoginPagePage {
 
-  aa = ' ';
-  bb = ' ';
+  email = 'inacio' ;
+  password = 'inacio';
 
   constructor(
     private nav: NavController,
@@ -20,8 +20,8 @@ export class LoginPagePage {
   ngOnInit() { }
 
   validate() {
-    if (this.aa && this.bb == ' ') {
-      //console.log('deu bom');
+    if (this.email == 'inacio' && this.password == 'inacio') {
+      console.log('deu bom');
       this.nav.navigateForward('home');
     }
     this.showError();
