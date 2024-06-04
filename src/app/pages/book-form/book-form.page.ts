@@ -1,6 +1,5 @@
 import { ThisReceiver } from '@angular/compiler';
 import { Component} from '@angular/core';
-import { empty, isEmpty } from 'rxjs';
 
 @Component({
   selector: 'app-book-form',
@@ -21,7 +20,7 @@ export class BookFormPage {
 
   constructor() { 
     let aux = localStorage.getItem('biblioteca');
-    this.biblioteca = JSON.parse(aux?? '');
+    this.biblioteca = JSON.parse(aux !== null && aux !== void 0 ? aux : "");
     console.log(this.biblioteca);
     
   }
@@ -30,7 +29,7 @@ export class BookFormPage {
     this.livro.id = Date.now().toString(16);
     this.biblioteca.push(this.livro);    
     let library = JSON.stringify(this.biblioteca)
-    localStorage.setItem('livro',library);
+    localStorage.setItem('biblioteca',library);
     //this.livro = isEmpty;
   //  console.log(this.livro.titulo,' ',this.livro.autor,' ',this.livro.categoria,' ',this.livro.ano,' ',this.livro.editora,' ');
     
